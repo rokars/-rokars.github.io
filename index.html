@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="#">
+    <title>Y4</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+  </head>
+
+  <body style="background-color:#f5f5ed;">
+
+    <div class="flex-container">
+      <div class="divH1"><h1>DFDR Y4 Project Dashboard</h1></div>
+      <div class="divLabel"><label for="dataFileUpload" style="">Choose data file to upload (JSON)</label></div>
+      <div class="divPara"><p id="dataFileName">No files currently selected for upload</p></div>
+    </div>
+
+    <div class="flex-container2">
+      <!--<p id="data"></p>-->
+      <button type="button" class="collapsible">Altitude Qnh (meters)</button>
+      <div class="content">
+        <div class="chart-container">
+          <canvas id="altitudeChart"></canvas>
+        </div>
+      </div>
+
+      <button type="button" class="collapsible">Air Speed (knots)</button>
+      <div class="content">
+        <div class="chart-container">
+          <canvas id="airSpeedChart"></canvas>
+        </div>
+      </div>
+
+      <button type="button" class="collapsible">Vertical Speed (m/s)</button>
+      <div class="content">
+        <div class="chart-container">
+          <canvas id="vertSpeedChart"></canvas>
+        </div>
+      </div>
+
+      <button type="button" class="collapsible">Normal Acceleration (g)</button>
+      <div class="content">
+        <div class="chart-container">
+          <canvas id="nAccelChart"></canvas>
+        </div>
+      </div>
+
+      <button type="button" class="collapsible">Motor Power (volts)</button>
+      <div class="content">
+        <div class="chart-container">
+          <canvas id="mPowerChart"></canvas>
+        </div>
+      </div>
+
+    </div>  <!-- end flex container2 -->
+
+    <div class="container">
+
+    </div>
+
+    <input type="file" id="dataFileUpload" accept=".json">
+    <script src="script.js"></script>
+  </body>
+</html>
